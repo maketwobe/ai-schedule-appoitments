@@ -1,0 +1,24 @@
+[project]
+name = "otinho-agent"
+version = "0.1.0"
+description = "Agente de IA Otinho – OtorrinoMed (Pydantic AI + Streamlit)"
+authors = [{name = "Otinho Team"}]
+requires-python = ">=3.10"
+dependencies = [
+  "streamlit",
+  "httpx",
+  "pydantic",
+  "pydantic-settings",
+  "python-dotenv",
+  "sqlalchemy",
+  "asyncpg",
+  "asyncio",
+  "cachetools",
+]
+
+[project.optional-dependencies]
+ai = ["pydantic-ai", "openai"]
+redis = ["redis"]
+
+[tool.ruff]
+line-length = 100
